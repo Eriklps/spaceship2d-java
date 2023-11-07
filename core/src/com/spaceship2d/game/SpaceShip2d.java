@@ -1,6 +1,7 @@
 package com.spaceship2d.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -64,6 +65,9 @@ public class SpaceShip2d extends ApplicationAdapter {
 		parameter.borderColor = Color.BLACK;
 		parameter.color = Color.WHITE;
 		bitmap = generator.generateFont(parameter);
+
+		Sound backgroundMusic = Gdx.audio.newSound(Gdx.files.internal("bgmusic.mp3"));
+		backgroundMusic.play(0.3f);
 
 		gameover = false;
 	}
