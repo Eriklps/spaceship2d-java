@@ -68,7 +68,7 @@ public class SpaceShip2d extends ApplicationAdapter {
 
 		Sound backgroundMusic = Gdx.audio.newSound(Gdx.files.internal("bgmusic.mp3"));
 		backgroundMusic.play(0.3f);
-		backgroundMusic.setLooping(true);
+		backgroundMusic.setLooping(backgroundMusic.loop(), true);
 
 		gameover = false;
 	}
