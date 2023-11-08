@@ -68,7 +68,7 @@ public class SpaceShip2d extends ApplicationAdapter {
 		bitmap = generator.generateFont(parameter);
 
 		Sound backgroundMusic = Gdx.audio.newSound(Gdx.files.internal("bgmusic.mp3"));
-		backgroundMusic.play(0.3f);
+		backgroundMusic.play(0.5f);
 		backgroundMusic.setLooping(backgroundMusic.loop(), true);
 
 		gameover = false;
@@ -157,7 +157,7 @@ public class SpaceShip2d extends ApplicationAdapter {
 			yMissile = posY  + nave.getHeight() / 2 - 12;
 
 			Sound shootSound = Gdx.audio.newSound(Gdx.files.internal("shoot.mp3"));
-			shootSound.play(0.5f);
+			shootSound.play(1.0f);
 
 		}
 
@@ -205,6 +205,10 @@ public class SpaceShip2d extends ApplicationAdapter {
 				--power;
 				if( power <= 0 ){
 					gameover = true;
+
+					Sound gameoverSound = Gdx.audio.newSound(Gdx.files.internal("gameover.mp3"));
+					gameoverSound.play(1.0f);
+
 				}
 				iter.remove();
 			}
