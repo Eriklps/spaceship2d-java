@@ -2,6 +2,7 @@ package com.spaceship2d.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -152,12 +153,11 @@ public class SpaceShip2d extends ApplicationAdapter {
 
 	private void moveMissile(){
 		if( Gdx.input.isKeyPressed(Input.Keys.SPACE) && !attack ){
+			attack = true;
+			yMissile = posY  + nave.getHeight() / 2 - 12;
 
 			Sound shootSound = Gdx.audio.newSound(Gdx.files.internal("shoot.mp3"));
 			shootSound.play(0.5f);
-
-			attack = true;
-			yMissile = posY  + nave.getHeight() / 2 - 12;
 
 		}
 
