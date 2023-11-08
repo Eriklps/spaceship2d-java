@@ -152,8 +152,13 @@ public class SpaceShip2d extends ApplicationAdapter {
 
 	private void moveMissile(){
 		if( Gdx.input.isKeyPressed(Input.Keys.SPACE) && !attack ){
+
+			Sound shootSound = Gdx.audio.newSound(Gdx.files.internal("shoot.mp3"));
+			shootSound.play(0.5f);
+
 			attack = true;
 			yMissile = posY  + nave.getHeight() / 2 - 12;
+
 		}
 
 		if(attack){
