@@ -67,11 +67,12 @@ public class SpaceShip2d extends ApplicationAdapter {
 		parameter.color = Color.WHITE;
 		bitmap = generator.generateFont(parameter);
 
+        gameover = false;
+
 		Sound backgroundMusic = Gdx.audio.newSound(Gdx.files.internal("bgmusic.mp3"));
 		backgroundMusic.play(0.5f);
 		backgroundMusic.setLooping(backgroundMusic.loop(), true);
 
-		gameover = false;
 	}
 
 	@Override
