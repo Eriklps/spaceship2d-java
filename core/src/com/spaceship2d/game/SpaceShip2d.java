@@ -117,7 +117,6 @@ public class SpaceShip2d extends ApplicationAdapter {
 			}
 		}
 
-
 		batch.end();
 	}
 
@@ -185,7 +184,6 @@ public class SpaceShip2d extends ApplicationAdapter {
 		if( TimeUtils.nanoTime() - lastEnemyTime > numEnemies ){
 			this.spawnEnemies();
 		}
-
 
 		for( Iterator<Rectangle> iter = enemies.iterator(); iter.hasNext(); ){
 			Rectangle enemy = iter.next();
