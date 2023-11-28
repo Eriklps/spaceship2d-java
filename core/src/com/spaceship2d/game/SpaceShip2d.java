@@ -74,7 +74,6 @@ public class SpaceShip2d extends ApplicationAdapter {
 		backgroundMusic.setLooping(backgroundMusic.loop(), true);
 
 	}
-
 	@Override
 	public void render () {
 
